@@ -1,2 +1,2 @@
-# material-dashboard-angular2-master
+# Registro de actividades
  Frond End
