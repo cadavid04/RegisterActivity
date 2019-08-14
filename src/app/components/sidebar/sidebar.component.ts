@@ -8,14 +8,14 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Registro Actividad',  icon: 'dashboard', class: '' },
-    { path: '/user-profile', title: 'Reportes',  icon:'person', class: '' },
-    { path: '/table-list', title: 'Gestión de doncentes',  icon:'content_paste', class: '' },
-    { path: '/typography', title: 'Gestión de cursos',  icon:'library_books', class: '' },
-    { path: '/icons', title: 'Gestión de grupos',  icon:'bubble_chart', class: '' },
-    { path: '/maps', title: 'Gestión de actividades',  icon:'location_on', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
+    { path: '/registroActividad', title: 'Registro Actividad',  icon: 'dashboard', class: '' },
+    { path: '/reporte', title: 'Reportes',  icon: 'person', class: '' },
+    { path: '/docente', title: 'Gestión de docentes',  icon: 'content_paste', class: '' },
+    { path: '/curso', title: 'Gestión de cursos',  icon: 'library_books', class: '' },
+    { path: '/grupo', title: 'Gestión de grupos',  icon: 'bubble_chart', class: '' },
+    { path: '/actividad', title: 'Gestión de actividades',  icon: 'location_on', class: '' },
+    { path: '/notifications', title: 'Notifications',  icon: 'notifications', class: '' },
+    { path: '/upgrade', title: 'Upgrade to PRO',  icon: 'unarchive', class: 'active-pro' },
 ];
 
 @Component({

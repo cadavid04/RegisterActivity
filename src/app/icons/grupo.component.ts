@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-icons',
-  templateUrl: './icons.component.html',
-  styleUrls: ['./icons.component.css']
+  templateUrl: './grupo.component.html',
+  styleUrls: ['./grupo.component.css']
 })
-export class IconsComponent implements OnInit {
+export class GrupoComponent implements OnInit {
 
   constructor() { }
 

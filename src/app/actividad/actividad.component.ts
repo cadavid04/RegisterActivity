@@ -10,10 +10,10 @@ draggable?: boolean;
 }
 @Component({
   selector: 'app-maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+  templateUrl: './actividad.component.html',
+  styleUrls: ['./actividad.component.css']
 })
-export class MapsComponent implements OnInit {
+export class ActividadComponent implements OnInit {
 
   constructor() { }
 

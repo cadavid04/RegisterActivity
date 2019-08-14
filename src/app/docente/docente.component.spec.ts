@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconsComponent } from './icons.component';
+import { TableListComponent } from './docente.component';
 
-describe('IconsComponent', () => {
-  let component: IconsComponent;
-  let fixture: ComponentFixture<IconsComponent>;
+describe('TableListComponent', () => {
+  let component: TableListComponent;
+  let fixture: ComponentFixture<TableListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconsComponent ]
+      declarations: [ TableListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconsComponent);
+    fixture = TestBed.createComponent(TableListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

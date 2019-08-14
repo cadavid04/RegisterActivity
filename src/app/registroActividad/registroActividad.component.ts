@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-registroActividad',
+  templateUrl: './registroActividad.component.html',
+  styleUrls: ['./registroActividad.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class RegistroActividadComponent implements OnInit {
 
   constructor() { }
   startAnimationForLineChart(chart){

@@ -10,12 +10,12 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { TableListComponent } from './table-list/table-list.component';
-import { TypographyComponent } from './typography/typography.component';
-import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
+import { RegistroActividadComponent } from './registroActividad/registroActividad.component';
+import { ReporteComponent } from './reportes/reporte.component';
+import { DocenteComponent } from './docente/docente.component';
+import { CursoComponent } from './curso/curso.component';
+import { GrupoComponent } from './icons/grupo.component';
+import { ActividadComponent } from './actividad/actividad.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import {

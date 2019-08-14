@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { UserProfileComponent } from '../../user-profile/user-profile.component';
-import { TableListComponent } from '../../table-list/table-list.component';
-import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
+import { RegistroActividadComponent } from '../../registroActividad/registroActividad.component';
+import { ReporteComponent } from '../../reportes/reporte.component';
+import { DocenteComponent } from '../../docente/docente.component';
+import { CursoComponent } from '../../curso/curso.component';
+import { GrupoComponent } from '../../icons/grupo.component';
+import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 
@@ -13,19 +13,19 @@ export const AdminLayoutRoutes: Routes = [
     // {
     //   path: '',
     //   children: [ {
-    //     path: 'dashboard',
-    //     component: DashboardComponent
+    //     path: 'registroActividad',
+    //     component: RegistroActividadComponent
     // }]}, {
     // path: '',
     // children: [ {
-    //   path: 'userprofile',
+    //   path: 'reporte',
     //   component: UserProfileComponent
     // }]
     // }, {
     //   path: '',
     //   children: [ {
     //     path: 'icons',
-    //     component: IconsComponent
+    //     component: GrupoComponent
     //     }]
     // }, {
     //     path: '',
@@ -37,13 +37,13 @@ export const AdminLayoutRoutes: Routes = [
     //     path: '',
     //     children: [ {
     //         path: 'maps',
-    //         component: MapsComponent
+    //         component: ActividadComponent
     //     }]
     // }, {
     //     path: '',
     //     children: [ {
     //         path: 'typography',
-    //         component: TypographyComponent
+    //         component: CursoComponent
     //     }]
     // }, {
     //     path: '',
@@ -52,12 +52,12 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
+    { path: 'registroActividad',      component: RegistroActividadComponent },
+    { path: 'reporte',   component: ReporteComponent },
+    { path: 'docente',     component: DocenteComponent },
+    { path: 'curso',     component: CursoComponent },
+    { path: 'grupo',          component: GrupoComponent },
+    { path: 'actividad',           component: ActividadComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
 ];
