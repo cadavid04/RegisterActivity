@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
-import { RegistroActividadComponent } from '../../registroActividad/registroActividad.component';
+import { RegistroActividadesComponent } from '../../registroActividades/registroActividades.component';
 import { ReporteComponent } from '../../reportes/reporte.component';
 import { DocenteComponent } from '../../docente/docente.component';
 import { CursoComponent } from '../../curso/curso.component';
@@ -11,6 +11,8 @@ import { GrupoComponent } from '../../icons/grupo.component';
 import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import {RegistrosComponent} from '../../registros/registros.component';
+
 
 import {
   MatButtonModule,
@@ -34,7 +36,7 @@ import {
     MatTooltipModule,
   ],
   declarations: [
-    RegistroActividadComponent,
+    RegistroActividadesComponent,
     ReporteComponent,
     DocenteComponent,
     CursoComponent,
@@ -42,6 +44,7 @@ import {
     ActividadComponent,
     NotificationsComponent,
     UpgradeComponent,
+    RegistrosComponent,
   ]
 })
 
