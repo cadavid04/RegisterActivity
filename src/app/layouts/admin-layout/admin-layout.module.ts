@@ -7,7 +7,7 @@ import { RegistroActividadesComponent } from '../../registroActividades/registro
 import { ReporteComponent } from '../../reportes/reporte.component';
 import { DocenteComponent } from '../../docente/docente.component';
 import { CursoComponent } from '../../curso/curso.component';
-import { GrupoComponent } from '../../icons/grupo.component';
+import { GrupoComponent } from '../../Grupo/grupo.component';
 import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';

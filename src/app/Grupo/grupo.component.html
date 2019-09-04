@@ -1,0 +1,26 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                        <th>ID</th>
+                        <th>ID Estado</th>
+                        <th>ID Docente</th>
+                        <th>Nombre</th>
+                         <th>Periodo</th>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let grupo of grupos">
+                        <td>{{ grupo.id}}</td>
+                        <td>{{ grupo.estado}}</td>
+                        <td>{{ grupo.idDocente}}</td>
+                        <td>{{ grupo.nombre}}</td>
+                        <td>{{ grupo.periodo}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
