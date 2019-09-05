@@ -12,6 +12,7 @@ import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {RegistrosComponent} from '../../registros/registros.component';
+import {ModalGrupoComponent} from '../../modal-grupo/modal-grupo.component';
 
 
 import {
@@ -22,6 +23,8 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -34,7 +37,9 @@ import {
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDialogModule,
   ],
+
   declarations: [
     RegistroActividadesComponent,
     ReporteComponent,
@@ -45,6 +50,7 @@ import {
     NotificationsComponent,
     UpgradeComponent,
     RegistrosComponent,
+    ModalGrupoComponent,
   ]
 })
 

@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegistroActividadesComponent } from './registroActividades/registroActividades.component';
 import { ReporteComponent } from './reportes/reporte.component';
 import { DocenteComponent } from './docente/docente.component';
@@ -19,6 +23,8 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { ModalGrupoComponent } from './modal-grupo/modal-grupo.component';
+import {AdminLayoutModule} from './layouts/admin-layout/admin-layout.module';
 
 
 @NgModule({
@@ -30,6 +36,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule,
+    BrowserModule,
+    MatDialogModule,
+    NgbModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     })
@@ -38,8 +48,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]

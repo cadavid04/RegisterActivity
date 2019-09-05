@@ -1,11 +1,28 @@
-
 <div class="main-content">
-    <div class="row">
-
-        <button mat-raised-button type="submit" class="btn btn-danger pull-right">Actualizar</button>
+    <div class="container-fluid">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                    <th>Grupo</th>
+                    <th>Actividad</th>
+                    <th>Fecha</th>
+                    <th>Tiempo</th>
+                    </thead>
+                    <tbody>
+                     <td><input #idGrupo/></td>
+                     <td><input #idActividad /></td>
+                     <td><input #idFecha /></td>
+                     <td><input #tiempo /></td>
+                       </tbody>
+                </table>
+                <app-modal-grupo></app-modal-grupo>
+                <button type="button" class="btn btn-outline-dark" title="Agregar actividad">Agregar Actividad</button>
+            </div>
+        </div>
     </div>
-
 </div>
+
 
 
 
