@@ -16,7 +16,7 @@ export class RegistroActividadService {
 
 
 
-  private registroUrl = 'api/RegistroActividades';
+  private registroUrl = 'http://localhost:8080/docente-api/registrosactividad/registros/1';
 
   constructor(
       private http: HttpClient,
@@ -28,6 +28,33 @@ export class RegistroActividadService {
             tap(_ => this.log('fetched registros')),
             catchError(this.handleError<RegistroActividad[]>('getRegistroActividades', []))
         );
+  }
+
+  getRegistro(id: number): Observable<RegistroActividad> {
+    const url = `http://localhost:8080/docente-api/registrosactividad/${id}`;
+    return this.http.get<RegistroActividad>(url).pipe(
+        tap(_ => this.log(`fetched hero id=${id}`)),
+        catchError(this.handleError<RegistroActividad>(`getRegistro id=${id}`))
+    );
+  }
+
+
+  deleteRegistro(registroActividad: RegistroActividad | number): Observable<RegistroActividad> {
+    const id = typeof registroActividad === 'number' ? registroActividad : registroActividad.id;
+    const url = `http://localhost:8080/docente-api/registrosactividad/borrar/${id}`;
+
+    return this.http.delete<RegistroActividad>(url, httpOptions).pipe(
+        tap(_ => this.log(`deleted hero id=${id}`)),
+        catchError(this.handleError<RegistroActividad>('deleteRegistro'))
+    );
+  }
+
+
+  updateRegistro(registroActividad: RegistroActividad): Observable<any> {
+    return this.http.put( 'http://localhost:8080/docente-api/registrosactividad/', registroActividad, httpOptions).pipe(
+        tap(_ => this.log(`updated hero id=${registroActividad.id}`)),
+        catchError(this.handleError<any>('updateRegistro'))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

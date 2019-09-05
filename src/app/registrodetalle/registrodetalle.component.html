@@ -1,0 +1,48 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Detalle de Actividad</h4>
+            <p class="card-category">Detalle de actividad, puede editar el registro actual</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div *ngIf="registroActividad">
+                  Detalle
+                </div>
+                <div>
+                    <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.idGrupo" placeholder="Grupo"/>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.idActividad" placeholder="Actividad"/>
+                    </mat-form-field>
+                      <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.fecha" placeholder="fecha"/>
+                      </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                        <input matInput [(ngModel)]="registroActividad.tiempo" placeholder="tiempo"/>
+                        </mat-form-field>
+                  </div>
+              </div>
+              </form>
+            <button (click)="goBack()">go back</button>
+            <button (click)="save()">save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

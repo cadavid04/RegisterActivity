@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegistroActividad } from '../registroActividad';
 import { RegistroActividadService} from '../registroActividad.service';
 
+
 @Component({
   selector: 'app-registros',
   templateUrl: './registros.component.html',

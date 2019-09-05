@@ -13,6 +13,8 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {RegistrosComponent} from '../../registros/registros.component';
 import {ModalGrupoComponent} from '../../modal-grupo/modal-grupo.component';
+import {TableModule} from 'primeng/table';
+import { RegistrodetalleComponent } from '../../registrodetalle/registrodetalle.component';
 
 
 import {
@@ -38,6 +40,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     MatTooltipModule,
     MatDialogModule,
+    TableModule,
   ],
 
   declarations: [
@@ -51,6 +54,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     UpgradeComponent,
     RegistrosComponent,
     ModalGrupoComponent,
+    RegistrodetalleComponent,
   ]
 })
 

@@ -19,12 +19,15 @@ import { ActividadComponent } from './actividad/actividad.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { RegistrosComponent } from './registros/registros.component';
+import {AccordionModule} from 'primeng/accordion';
+import {MenuItem} from 'primeng/api';
 import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ModalGrupoComponent } from './modal-grupo/modal-grupo.component';
 import {AdminLayoutModule} from './layouts/admin-layout/admin-layout.module';
+
 
 
 @NgModule({
