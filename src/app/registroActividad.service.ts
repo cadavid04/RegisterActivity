@@ -30,6 +30,14 @@ export class RegistroActividadService {
         );
   }
 
+  getSumaTiempo(): Observable<number> {
+    return this.http.get<number>('http://localhost:8080/docente-api/registrosactividad/suma/1')
+        .pipe(
+            tap(_ => this.log('fetched number')),
+            catchError(this.handleError<number>('getSumaTiempo' ))
+        );
+  }
+
   getRegistro(id: number): Observable<RegistroActividad> {
     const url = `http://localhost:8080/docente-api/registrosactividad/${id}`;
     return this.http.get<RegistroActividad>(url).pipe(

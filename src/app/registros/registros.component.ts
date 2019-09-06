@@ -22,4 +22,11 @@ export class RegistrosComponent implements OnInit {
         .subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
   }
 
+  deleteRegistro(registroActividad: RegistroActividad): void {
+    this.registroActividades = this.registroActividades.filter(h => h !== registroActividad);
+    this.registroActividadesService.deleteRegistro(registroActividad).subscribe();
+  }
+  getTotalTiempo() {
+    return this.registroActividadesService.getSumaTiempo();
+  }
 }
