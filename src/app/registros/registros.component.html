@@ -1,10 +1,15 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="card-body">
-      <div class="table-responsive">
+      <Label>
+      <select #langSelect (change)="translate.use(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+        </Label>
+     <div class="table-responsive">
         <table class="table">
           <thead align="center">
-          <th>Grupo</th>
+          <th> {{ 'HOME.ETIQUETAGRUPO' | translate }}</th>
           <th>Actividad</th>
           <th>Fecha</th>
           <th>Tiempo</th>
@@ -44,19 +49,17 @@
                 <td align="center">
                   <button class="delete" title="delete registro"
                           (click)="deleteRegistro(registro)">x</button>
-
                   <a routerLink="/detail/{{registro.id}}">
                     <span class="badge"></span> {{registro.id}}
                   </a>
-
                 </td>
                 <td align="center">{{ registro.idDocente }}</td>
                 <td align="center">{{ registro.idGrupo}}</td>
                 <td align="center">{{ registro.idActividad }}</td>
                 <td align="center">{{ registro.fecha | date: "MM/dd/yyyy"}}</td>
                 <td align="center">{{ registro.tiempo }}</td>
+                <td> {{getTotalTiempo()}} </td>
               </tr>
-              {{  getTotalTiempo() }}
               </tbody>
             </table>
 

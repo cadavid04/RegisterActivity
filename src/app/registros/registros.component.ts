@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistroActividad } from '../registroActividad';
 import { RegistroActividadService} from '../registroActividad.service';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -12,7 +13,15 @@ export class RegistrosComponent implements OnInit {
 
   registroActividades: RegistroActividad[];
 
-  constructor(private registroActividadesService: RegistroActividadService) { }
+
+  constructor(private registroActividadesService: RegistroActividadService,
+              private translate: TranslateService) {
+    translate.addLangs(['en', 'es']);
+    translate.setDefaultLang('es');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/es|en/) ? browserLang : 'es');
+  }
 
   ngOnInit() {
     this.getRegistros();
@@ -27,6 +36,6 @@ export class RegistrosComponent implements OnInit {
     this.registroActividadesService.deleteRegistro(registroActividad).subscribe();
   }
   getTotalTiempo() {
-    return this.registroActividadesService.getSumaTiempo();
+    return this.registroActividadesService.getSumaTiempo().subscribe();
   }
 }

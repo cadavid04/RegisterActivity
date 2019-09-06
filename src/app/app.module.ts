@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -27,7 +27,8 @@ import {
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ModalGrupoComponent } from './modal-grupo/modal-grupo.component';
 import {AdminLayoutModule} from './layouts/admin-layout/admin-layout.module';
-
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TraductorComponent } from './traductor/traductor.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import {AdminLayoutModule} from './layouts/admin-layout/admin-layout.module';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

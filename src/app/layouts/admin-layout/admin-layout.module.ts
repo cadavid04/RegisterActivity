@@ -15,6 +15,14 @@ import {RegistrosComponent} from '../../registros/registros.component';
 import {ModalGrupoComponent} from '../../modal-grupo/modal-grupo.component';
 import {TableModule} from 'primeng/table';
 import { RegistrodetalleComponent } from '../../registrodetalle/registrodetalle.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 
 import {
@@ -26,6 +34,7 @@ import {
   MatSelectModule
 } from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
+import {TraductorComponent} from '../../traductor/traductor.component';
 
 @NgModule({
   imports: [
@@ -41,6 +50,14 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTooltipModule,
     MatDialogModule,
     TableModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
 
   declarations: [
@@ -55,6 +72,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     RegistrosComponent,
     ModalGrupoComponent,
     RegistrodetalleComponent,
+    TraductorComponent,
   ]
 })
 
