@@ -1,3 +1,6 @@
-<p>
-  traductor works!
-</p>
+  <mat-form-field>
+    <mat-label>idioma</mat-label>
+  <select matNativeControl required #langSelect (change)="translate.use(langSelect.value)">
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+  </select>
+  </mat-form-field>

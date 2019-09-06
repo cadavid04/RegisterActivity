@@ -30,11 +30,11 @@ export class RegistroActividadService {
         );
   }
 
-  getSumaTiempo(): Observable<number> {
+  getSumaTiempo(): Observable<any> {
     return this.http.get<number>('http://localhost:8080/docente-api/registrosactividad/suma/1')
         .pipe(
             tap(_ => this.log('fetched number')),
-            catchError(this.handleError<number>('getSumaTiempo' ))
+            catchError(this.handleError<any>('getSumaTiempo' ))
         );
   }
 
@@ -52,7 +52,7 @@ export class RegistroActividadService {
     const url = `http://localhost:8080/docente-api/registrosactividad/borrar/${id}`;
 
     return this.http.delete<RegistroActividad>(url, httpOptions).pipe(
-        tap(_ => this.log(`deleted hero id=${id}`)),
+        tap(_ => this.log(`deleteRegistro id=${id}`)),
         catchError(this.handleError<RegistroActividad>('deleteRegistro'))
     );
   }
@@ -60,7 +60,7 @@ export class RegistroActividadService {
 
   updateRegistro(registroActividad: RegistroActividad): Observable<any> {
     return this.http.put( 'http://localhost:8080/docente-api/registrosactividad/', registroActividad, httpOptions).pipe(
-        tap(_ => this.log(`updated hero id=${registroActividad.id}`)),
+        tap(_ => this.log(`updateRegistro id=${registroActividad.id}`)),
         catchError(this.handleError<any>('updateRegistro'))
     );
   }

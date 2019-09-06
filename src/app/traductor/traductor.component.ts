@@ -9,13 +9,10 @@ import {TranslateService} from '@ngx-translate/core';
 export class TraductorComponent  {
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
+    translate.addLangs(['en', 'es']);
+    translate.setDefaultLang('es');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    translate.use(browserLang.match(/es|en/) ? browserLang : 'es');
   }
-
-
-
 }
