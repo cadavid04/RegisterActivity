@@ -1,6 +1,6 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h2 class="modal-title" id="modal-basic-title">Grupos</h2>
+    <h2 class="modal-title" id="modal-basic-title">{{ 'HOME.ETIQUETAGRUPOS' | translate }}</h2>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -13,7 +13,7 @@
   </div>
 </ng-template>
 
-<button type="button" class="btn btn-outline-dark" (click)="open(content)">Listar Grupos</button>
+<button type="button" class="btn btn-outline-dark" (click)="open(content)">{{ 'HOME.ETIQUETALISTARGRUPOS' | translate }}</button>
 
 <hr>
 

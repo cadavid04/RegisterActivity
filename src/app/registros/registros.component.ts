@@ -32,6 +32,6 @@ export class RegistrosComponent implements OnInit {
     this.registroActividadesService.deleteRegistro(registroActividad).subscribe();
   }
   public getTotalTiempo() {
-    return this.registroActividadesService.getSumaTiempo().subscribe((data) => this.suma = data);
+    return this.registroActividadesService.getSumaTiempo().subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
   }
 }
