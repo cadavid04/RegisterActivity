@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title ">{{ 'HOME.ETIQUETALISTADOGRUPOS' | translate }}</h4>
+                    <p class="card-category">{{ 'HOME.ETIQUETAGRUPOSACTIVOS' | translate }}</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead align="center">
+                            <th>{{ 'HOME.ETIQUETAID' | translate }}</th>
+                            <th>{{ 'HOME.ETIQUETAESTADO' | translate }}</th>
+                            <th>{{ 'HOME.ETIQUETADOCENTE' | translate }}</th>
+                            <th>{{ 'HOME.ETIQUETANOMBRE' | translate }}</th>
+                            <th>{{ 'HOME.ETIQUETAPERIODO' | translate }}</th>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let grupo of grupos">
+                                <td align="center">{{ grupo.id}}</td>
+                                <td align="center">{{ grupo.estado}}</td>
+                                <td align="center">{{ grupo.idDocente}}</td>
+                                <td align="center">{{ grupo.nombre}}</td>
+                                <td align="center">{{ grupo.periodo}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

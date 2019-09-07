@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardComponent } from './registroActividad.component';
+import { ModalGrupoComponent } from './modal-grupo.component';
 
-describe('DashboardComponent', () => {
-  let component: DashboardComponent;
-  let fixture: ComponentFixture<DashboardComponent>;
+describe('ModalGrupoComponent', () => {
+  let component: ModalGrupoComponent;
+  let fixture: ComponentFixture<ModalGrupoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ ModalGrupoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(ModalGrupoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

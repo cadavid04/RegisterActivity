@@ -3,14 +3,27 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
-import { RegistroActividadComponent } from '../../registroActividad/registroActividad.component';
+import { RegistroActividadesComponent } from '../../registroActividades/registroActividades.component';
 import { ReporteComponent } from '../../reportes/reporte.component';
 import { DocenteComponent } from '../../docente/docente.component';
 import { CursoComponent } from '../../curso/curso.component';
-import { GrupoComponent } from '../../icons/grupo.component';
+import { GrupoComponent } from '../../Grupo/grupo.component';
 import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import {RegistrosComponent} from '../../registros/registros.component';
+import {ModalGrupoComponent} from '../../modal-grupo/modal-grupo.component';
+import {TableModule} from 'primeng/table';
+import { RegistrodetalleComponent } from '../../registrodetalle/registrodetalle.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
 
 import {
   MatButtonModule,
@@ -20,6 +33,9 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
+import {TraductorComponent} from '../../traductor/traductor.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -32,9 +48,20 @@ import {
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDialogModule,
+    TableModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
+
   declarations: [
-    RegistroActividadComponent,
+    RegistroActividadesComponent,
     ReporteComponent,
     DocenteComponent,
     CursoComponent,
@@ -42,6 +69,10 @@ import {
     ActividadComponent,
     NotificationsComponent,
     UpgradeComponent,
+    RegistrosComponent,
+    ModalGrupoComponent,
+    RegistrodetalleComponent,
+    TraductorComponent,
   ]
 })
 

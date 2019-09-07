@@ -1,0 +1,51 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Historial de registros de actividades</h4>
+            <p class="card-category">Historial de registros de actividades de docente</p>
+          </div>
+        <div class="card-body">
+          <div *ngIf="registroActividad">
+            <div>
+              <div class="row">
+                      <div class="col-md-2">
+                      <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.idGrupo" placeholder="idGrupo"/>
+                      </mat-form-field>
+                      </div>
+
+                    <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.idActividad" placeholder="Actividad"/>
+                    </mat-form-field>
+
+                      <mat-form-field class="example-full-width">
+                      <input matInput type="date" [(ngModel)]="registroActividad.fecha" placeholder="fecha"/>
+                      </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]="registroActividad.tiempo" placeholder="tiempo"/>
+                    </mat-form-field>
+                    </div>
+
+                  </div>
+                  <button type="button" class="btn btn-outline-dark" (click)="goBack()">Atras</button>
+                  <button type="button" class="btn btn-outline-dark" (click)="save()">Guardar"</button>
+                </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
