@@ -14,7 +14,7 @@ import { RegistroActividadesComponent } from './registroActividades/registroActi
 import { ReporteComponent } from './reportes/reporte.component';
 import { DocenteComponent } from './docente/docente.component';
 import { CursoComponent } from './curso/curso.component';
-import { GrupoComponent } from './Grupo/grupo.component';
+import { GrupoComponent } from './grupo/grupo.component';
 import { ActividadComponent } from './actividad/actividad.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
@@ -29,6 +29,15 @@ import { ModalGrupoComponent } from './modal-grupo/modal-grupo.component';
 import {AdminLayoutModule} from './layouts/admin-layout/admin-layout.module';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { TraductorComponent } from './traductor/traductor.component';
+import {MatRippleModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {FooterComponent} from './components/footer/footer.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+
 
 
 @NgModule({
@@ -44,16 +53,24 @@ import { TraductorComponent } from './traductor/traductor.component';
     BrowserModule,
     MatDialogModule,
     NgbModule,
+    MatRippleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatDialogModule,
+
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    AdminLayoutModule
   ],
 
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
