@@ -7,7 +7,7 @@ import { RegistroActividadesComponent } from '../../registroActividades/registro
 import { ReporteComponent } from '../../reportes/reporte.component';
 import { DocenteComponent } from '../../docente/docente.component';
 import { CursoComponent } from '../../curso/curso.component';
-import { GrupoComponent } from '../../grupo/grupo.component';
+import { GrupoComponent } from '../../Grupo/grupo.component';
 import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
@@ -35,11 +35,6 @@ import {
 } from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 import {TraductorComponent} from '../../traductor/traductor.component';
-import {FooterComponent} from '../../components/footer/footer.component';
-import {NavbarComponent} from '../../components/navbar/navbar.component';
-import {SidebarComponent} from '../../components/sidebar/sidebar.component';
-import {ComponentsModule} from '../../components/components.module';
-import {AppModule} from '../../app.module';
 
 @NgModule({
   imports: [
@@ -62,9 +57,9 @@ import {AppModule} from '../../app.module';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    }),
-    ComponentsModule,
+    })
   ],
+
   declarations: [
     RegistroActividadesComponent,
     ReporteComponent,
@@ -77,6 +72,7 @@ import {AppModule} from '../../app.module';
     RegistrosComponent,
     ModalGrupoComponent,
     RegistrodetalleComponent,
+    TraductorComponent,
   ]
 })
 

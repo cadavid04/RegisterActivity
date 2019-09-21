@@ -6,7 +6,6 @@ import {TraductorComponent} from '../traductor/traductor.component';
 import {Observable} from 'rxjs';
 
 
-
 @Component({
   selector: 'app-registros',
   templateUrl: './registros.component.html',
@@ -16,13 +15,13 @@ export class RegistrosComponent implements OnInit {
   suma: number;
 
   registroActividades: RegistroActividad[];
-  constructor(private registroActividadesService: RegistroActividadService,) {
-  }
+
+  constructor(private registroActividadesService: RegistroActividadService
+  ) {}
 
   ngOnInit() {
     this.getRegistros();
   }
-
   getRegistros(): void {
     this.registroActividadesService.getRegistroActividades()
         .subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
@@ -32,15 +31,7 @@ export class RegistrosComponent implements OnInit {
     this.registroActividades = this.registroActividades.filter(h => h !== registroActividad);
     this.registroActividadesService.deleteRegistro(registroActividad).subscribe();
   }
-
   public getTotalTiempo() {
     return this.registroActividadesService.getSumaTiempo().subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
   }
-
-  clickMethod(registroActividad: RegistroActividad) {
-    if (confirm("¿Está seguro de borrar este registro de actividad?")) {
-      console.log(this.deleteRegistro(registroActividad));
-    }
-  }
 }
-
