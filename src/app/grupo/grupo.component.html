@@ -12,7 +12,6 @@
                             <thead align="center">
                             <th>{{ 'HOME.ETIQUETAID' | translate }}</th>
                             <th>{{ 'HOME.ETIQUETAESTADO' | translate }}</th>
-                            <th>{{ 'HOME.ETIQUETADOCENTE' | translate }}</th>
                             <th>{{ 'HOME.ETIQUETANOMBRE' | translate }}</th>
                             <th>{{ 'HOME.ETIQUETAPERIODO' | translate }}</th>
                             </thead>
@@ -20,7 +19,6 @@
                             <tr *ngFor="let grupo of grupos">
                                 <td align="center">{{ grupo.id}}</td>
                                 <td align="center">{{ grupo.estado}}</td>
-                                <td align="center">{{ grupo.idDocente}}</td>
                                 <td align="center">{{ grupo.nombre}}</td>
                                 <td align="center">{{ grupo.periodo}}</td>
                             </tr>

@@ -4,6 +4,7 @@ import { RegistroActividadService} from '../registroActividad.service';
 import {TranslateService} from '@ngx-translate/core';
 import {TraductorComponent} from '../traductor/traductor.component';
 import {Observable} from 'rxjs';
+import {RegistroActividadDTO} from '../registroActividadDTO';
 
 
 
@@ -15,6 +16,7 @@ import {Observable} from 'rxjs';
 export class RegistrosComponent implements OnInit {
   suma: number;
 
+  registroActividadesDTO: RegistroActividadDTO[];
   registroActividades: RegistroActividad[];
   constructor(private registroActividadesService: RegistroActividadService,) {
   }
@@ -25,7 +27,7 @@ export class RegistrosComponent implements OnInit {
 
   getRegistros(): void {
     this.registroActividadesService.getRegistroActividades()
-        .subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
+        .subscribe(RegistroActividades => this.registroActividadesDTO = RegistroActividades);
   }
 
   deleteRegistro(registroActividad: RegistroActividad): void {

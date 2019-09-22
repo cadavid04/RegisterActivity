@@ -5,4 +5,5 @@ export class RegistroActividad {
     fecha: Date;
     id: number;
     tiempo: number;
+
 }

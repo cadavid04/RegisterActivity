@@ -12,14 +12,26 @@
           <div *ngIf="registroActividad">
             <div>
               <div class="row">
+
                       <div class="col-md-2">
+                          <mat-form-field class="example-full-width">
+                              <input matInput [(ngModel)]="registroActividad.id"/>
+                          </mat-form-field>
+                      </div>
+
+                  <div class="col-md-2">
                       <mat-form-field class="example-full-width">
-                      <input matInput [(ngModel)]="registroActividad.idGrupo" placeholder="idGrupo"/>
+                          <input matInput [(ngModel)]="registroActividad.idDocente"/>
+                      </mat-form-field>
+                  </div>
+
+                      <mat-form-field class="example-full-width">
+                      <input matInput [(ngModel)]="registroActividad.idGrupo" placeholder="Id Grupo"/>
                       </mat-form-field>
                       </div>
 
                     <mat-form-field class="example-full-width">
-                      <input matInput [(ngModel)]="registroActividad.idActividad" placeholder="Actividad"/>
+                      <input matInput [(ngModel)]="registroActividad.idActividad" placeholder="Id Actividad"/>
                     </mat-form-field>
 
                       <mat-form-field class="example-full-width">
@@ -41,7 +53,6 @@
     </div>
     </div>
 
-  </div>
 </div>
 
 

@@ -43,21 +43,22 @@
                             <th>{{ 'HOME.ETIQUETATIEMPO' | translate }}</th>
                             </thead>
                             <tbody>
-                            <tr *ngFor="let registro of registroActividades">
+                            <tr *ngFor="let registro of registroActividadesDTO">
                                 <td align="center">
 
                                     <a routerLink="/detail/{{registro.id}}">
                                         <span class="badge"></span> {{registro.id}}
                                     </a>
                                 </td>
-                                <td align="center">{{ registro.idDocente }}</td>
-                                <td align="center">{{ registro.idGrupo}}</td>
-                                <td align="center">{{ registro.idActividad }}</td>
-                                <td align="center">{{ registro.fecha | date: "MM/dd/yyyy"}}</td>
+
+                                <td align="center">{{ registro.docente}}</td>
+                                <td align="center">{{ registro.grupo}}</td>
+                                <td align="center">{{ registro.actividad}}</td>
+                                <td align="center">{{ registro.fecha | date: "dd-MMM-yy"}}</td>
                                 <td align="center">{{ registro.tiempo }} </td>
                                 <td align="center"> <button type=button class="btn btn-primary"  title="delete registro"
                                                             (click)="clickMethod(registro)">x</button> </td>
-                                {{suma}}
+
                             </tr>
                             </tbody>
                         </table>

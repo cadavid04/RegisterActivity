@@ -4,6 +4,7 @@ import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {RegistroActividad} from './registroActividad';
 import {MessageService} from './message.service';
+import {RegistroActividadDTO} from './registroActividadDTO';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,11 +23,11 @@ export class RegistroActividadService {
       private http: HttpClient,
       private messageService: MessageService) { }
 
-  getRegistroActividades(): Observable<RegistroActividad[]> {
-    return this.http.get<RegistroActividad[]>(this.registroUrl)
+  getRegistroActividades(): Observable<RegistroActividadDTO[]> {
+    return this.http.get<RegistroActividadDTO[]>('http://localhost:8080/docente-api/registrosactividad/registros/1')
         .pipe(
             tap(_ => this.log('fetched registros')),
-            catchError(this.handleError<RegistroActividad[]>('getRegistroActividades', []))
+            catchError(this.handleError<RegistroActividadDTO[]>('getRegistroActividades', []))
         );
   }
 
