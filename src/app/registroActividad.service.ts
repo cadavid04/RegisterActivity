@@ -39,11 +39,11 @@ export class RegistroActividadService {
         );
   }
 
-  getRegistro(id: number): Observable<RegistroActividad> {
+  getRegistro(id: number): Observable<RegistroActividadDTO> {
     const url = `http://localhost:8080/docente-api/registrosactividad/${id}`;
-    return this.http.get<RegistroActividad>(url).pipe(
+    return this.http.get<RegistroActividadDTO>(url).pipe(
         tap(_ => this.log(`fetched hero id=${id}`)),
-        catchError(this.handleError<RegistroActividad>(`getRegistro id=${id}`))
+        catchError(this.handleError<RegistroActividadDTO>(`getRegistro id=${id}`))
     );
   }
 
@@ -59,9 +59,9 @@ export class RegistroActividadService {
   }
 
 
-  updateRegistro(registroActividad: RegistroActividad): Observable<any> {
-    return this.http.put( 'http://localhost:8080/docente-api/registrosactividad/', registroActividad, httpOptions).pipe(
-        tap(_ => this.log(`updateRegistro id=${registroActividad.id}`)),
+  updateRegistro(registroActividadDTO: RegistroActividadDTO): Observable<any> {
+    return this.http.put( 'http://localhost:8080/docente-api/registrosactividad/', registroActividadDTO, httpOptions).pipe(
+        tap(_ => this.log(`updateRegistro id=${registroActividadDTO.id}`)),
         catchError(this.handleError<any>('updateRegistro'))
     );
   }

@@ -4,6 +4,7 @@ import { RegistroActividad } from '../registroActividad';
 import { RegistroActividadService} from '../registroActividad.service';
 import {ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
+import {RegistroActividadDTO} from '../registroActividadDTO';
 
 @Component({
   selector: 'app-registrodetalle',
@@ -11,7 +12,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./registrodetalle.component.scss']
 })
 export class RegistrodetalleComponent implements OnInit {
-  @Input() registroActividad: RegistroActividad;
+  @Input() registroActividad: RegistroActividadDTO;
 
   constructor(
       private route: ActivatedRoute,
@@ -26,7 +27,7 @@ export class RegistrodetalleComponent implements OnInit {
   getRegistro(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.registroService.getRegistro(id)
-        .subscribe(registroActividad => this.registroActividad = registroActividad);
+        .subscribe(registroActividadDTO => this.registroActividad = registroActividadDTO);
   }
 
   goBack(): void {
