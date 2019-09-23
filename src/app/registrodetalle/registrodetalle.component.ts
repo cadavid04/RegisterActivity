@@ -13,6 +13,7 @@ import {RegistroActividadDTO} from '../registroActividadDTO';
 })
 export class RegistrodetalleComponent implements OnInit {
   @Input() registroActividad: RegistroActividadDTO;
+  @Input() actividad: RegistroActividadDTO;
 
   constructor(
       private route: ActivatedRoute,

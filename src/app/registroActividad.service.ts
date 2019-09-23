@@ -48,13 +48,13 @@ export class RegistroActividadService {
   }
 
 
-  deleteRegistro(registroActividad: RegistroActividad | number): Observable<RegistroActividad> {
+  deleteRegistro(registroActividad: RegistroActividadDTO | number): Observable<RegistroActividadDTO> {
     const id = typeof registroActividad === 'number' ? registroActividad : registroActividad.id;
     const url = `http://localhost:8080/docente-api/registrosactividad/borrar/${id}`;
 
-    return this.http.delete<RegistroActividad>(url, httpOptions).pipe(
+    return this.http.delete<RegistroActividadDTO>(url, httpOptions).pipe(
         tap(_ => this.log(`deleteRegistro id=${id}`)),
-        catchError(this.handleError<RegistroActividad>('deleteRegistro'))
+        catchError(this.handleError<RegistroActividadDTO>('deleteRegistro'))
     );
   }
 

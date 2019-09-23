@@ -18,7 +18,7 @@ export class RegistrosComponent implements OnInit {
 
   registroActividadesDTO: RegistroActividadDTO[];
   registroActividades: RegistroActividad[];
-  constructor(private registroActividadesService: RegistroActividadService,) {
+  constructor(private registroActividadesService: RegistroActividadService,){
   }
 
   ngOnInit() {
@@ -30,8 +30,8 @@ export class RegistrosComponent implements OnInit {
         .subscribe(RegistroActividades => this.registroActividadesDTO = RegistroActividades);
   }
 
-  deleteRegistro(registroActividad: RegistroActividad): void {
-    this.registroActividades = this.registroActividades.filter(h => h !== registroActividad);
+  deleteRegistro(registroActividad: RegistroActividadDTO): void {
+    this.registroActividadesDTO = this.registroActividadesDTO.filter(h => h !== registroActividad);
     this.registroActividadesService.deleteRegistro(registroActividad).subscribe();
   }
 
@@ -39,7 +39,7 @@ export class RegistrosComponent implements OnInit {
     return this.registroActividadesService.getSumaTiempo().subscribe(RegistroActividades => this.registroActividades = RegistroActividades);
   }
 
-  clickMethod(registroActividad: RegistroActividad) {
+  clickMethod(registroActividad: RegistroActividadDTO) {
     if (confirm("¿Está seguro de borrar este registro de actividad?")) {
       console.log(this.deleteRegistro(registroActividad));
     }
