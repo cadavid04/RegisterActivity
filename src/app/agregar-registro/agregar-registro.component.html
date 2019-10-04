@@ -1,0 +1,50 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Registrar Actividades del Docente</h4>
+              <p class="card-category">Registro de Actividades</p>
+            </div>
+            <div class="card-body">
+              <div>
+              <div>
+                  <div class="row">
+
+                    <div class="col-md-2">
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Nombre Docente"[(ngModel)]="registroActividad.docente" requeried/>
+                      </mat-form-field>
+                    </div>
+
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Grupo"[(ngModel)]="registroActividad.grupo" requeried/>
+                    </mat-form-field>
+                  </div>
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Actividad"[(ngModel)]="registroActividad.actividad" requeried/>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Fecha" type="date" [(ngModel)]="registroActividad.fecha" requeried/>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Tiempo"[(ngModel)]="registroActividad.tiempo" requeried/>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button type="button" class="btn btn-outline-dark" (click)="agregarRegistro(registroActividad)">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

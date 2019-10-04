@@ -37,6 +37,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {FooterComponent} from './components/footer/footer.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
+import { AgregarRegistroComponent } from './agregar-registro/agregar-registro.component';
 
 
 
@@ -68,8 +69,7 @@ import {SidebarComponent} from './components/sidebar/sidebar.component';
 
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-  ],
+    AdminLayoutComponent],
 
   providers: [],
   bootstrap: [AppComponent]

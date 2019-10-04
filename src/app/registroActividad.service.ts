@@ -66,6 +66,15 @@ export class RegistroActividadService {
     );
   }
 
+  agregarRegistro(registroActividadDTO: RegistroActividadDTO) {
+    console.log(registroActividadDTO)
+    return this.http.post<RegistroActividadDTO>( 'http://localhost:8080/docente-api/registrosactividad', registroActividadDTO, httpOptions)/*.pipe(
+        tap((newHero: RegistroActividadDTO) => this.log(`added hero w/ id=${newHero.id}`)),
+        catchError(this.handleError<RegistroActividadDTO>('agregarRegistro'))
+    );*/.subscribe();
+  }
+
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

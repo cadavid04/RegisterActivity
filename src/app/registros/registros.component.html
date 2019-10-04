@@ -2,26 +2,12 @@
 <div class="main-content">
     <div class="container-fluid">
 <app-traductor></app-traductor>
+        <app-agregar-registro></app-agregar-registro>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table">
-                    <thead align="center">
-                    <th> {{ 'HOME.ETIQUETAGRUPO' | translate }}</th>
-                    <th> {{ 'HOME.ETIQUETAACTIVIDAD' | translate }}</th>
-                    <th> {{ 'HOME.ETIQUETAFECHA' | translate }}</th>
-                    <th> {{ 'HOME.ETIQUETATIEMPO' | translate }}</th>
-                    </thead>
-                    <tbody >
 
-                    <td align="center"><input #idGrupo/></td>
-                    <td align="center"><input #idActividad /></td>
-                    <td align="center"><input type ="Date" #idFecha /></td>
-                    <td align="center"><input #tiempo /></td>
-                    </tbody>
-                </table>
                 <app-modal-grupo></app-modal-grupo>
-                <button type="button" class="btn btn-outline-dark" title="Agregar actividad">{{ 'HOME.ETIQUETAAGREGAACTIVIDAD' | translate }}</button>
-            </div>
+
         </div>
 
         <div class="col-md-12">

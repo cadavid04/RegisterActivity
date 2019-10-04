@@ -1,10 +1,8 @@
 export class RegistroActividadDTO {
-    id: number;
-    docente: string;
-    grupo: string;
     actividad: string;
-    tiempo: string;
+    docente: string;
     fecha: Date;
-
-
+    grupo: string;
+    id: number;
+    tiempo: number;
 }

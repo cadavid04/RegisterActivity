@@ -40,6 +40,7 @@ import {NavbarComponent} from '../../components/navbar/navbar.component';
 import {SidebarComponent} from '../../components/sidebar/sidebar.component';
 import {ComponentsModule} from '../../components/components.module';
 import {AppModule} from '../../app.module';
+import {AgregarRegistroComponent} from '../../agregar-registro/agregar-registro.component';
 
 @NgModule({
   imports: [
@@ -77,6 +78,7 @@ import {AppModule} from '../../app.module';
     RegistrosComponent,
     ModalGrupoComponent,
     RegistrodetalleComponent,
+    AgregarRegistroComponent,
   ]
 })
 

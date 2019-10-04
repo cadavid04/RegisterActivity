@@ -8,6 +8,7 @@ import { GrupoComponent } from '../../grupo/grupo.component';
 import { ActividadComponent } from '../../actividad/actividad.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { RegistrodetalleComponent } from '../../registrodetalle/registrodetalle.component';
+import {AgregarRegistroComponent} from '../../agregar-registro/agregar-registro.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -19,4 +20,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'actividad',           component: ActividadComponent },
     { path: 'detail/:id', component: RegistrodetalleComponent },
     { path: 'notifications',  component: NotificationsComponent },
+    { path: 'agregarregistro',  component: AgregarRegistroComponent },
 ];
