@@ -14,11 +14,6 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class RegistroActividadService {
-
-
-
-  private registroUrl = 'http://localhost:8080/docente-api/registrosactividad/registros/1';
-
   constructor(
       private http: HttpClient,
       private messageService: MessageService) { }
@@ -30,6 +25,17 @@ export class RegistroActividadService {
             catchError(this.handleError<RegistroActividadDTO[]>('getRegistroActividades', []))
         );
   }
+
+  getRegistroActividadesGrupo(grupo: string ): Observable<RegistroActividadDTO[]> {
+      let docente; docente = 'Carlos Vergara';
+      const url = `http://localhost:8080/docente-api/registrosactividad/registros/${docente}/${grupo}`;
+    return this.http.get<RegistroActividadDTO[]>(url)
+        .pipe(
+            tap(_ => this.log('fetched registros')),
+            catchError(this.handleError<RegistroActividadDTO[]>('getRegistroActividadesGrupo', []))
+        );
+  }
+
 
   getSumaTiempo(): Observable<any> {
     return this.http.get<number>('http://localhost:8080/docente-api/registrosactividad/suma/1')
@@ -68,7 +74,7 @@ export class RegistroActividadService {
 
   agregarRegistro(registroActividadDTO: RegistroActividadDTO) {
     console.log(registroActividadDTO)
-    return this.http.post<RegistroActividadDTO>( 'http://localhost:8080/docente-api/registrosactividad', registroActividadDTO, httpOptions)/*.pipe(
+      return this.http.post<RegistroActividadDTO>( 'http://localhost:8080/docente-api/registrosactividad', registroActividadDTO, httpOptions)/*.pipe(
         tap((newHero: RegistroActividadDTO) => this.log(`added hero w/ id=${newHero.id}`)),
         catchError(this.handleError<RegistroActividadDTO>('agregarRegistro'))
     );*/.subscribe();

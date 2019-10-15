@@ -5,9 +5,16 @@
         <app-agregar-registro></app-agregar-registro>
         <div class="card-body">
             <div class="table-responsive">
-
-                <app-modal-grupo></app-modal-grupo>
-
+                <mat-form-field class="example-full-width">
+                    <mat-label>Grupos</mat-label>
+                    <mat-select [(ngModel)]="grupo" name="Grupo" required>
+                        <mat-option *ngFor="let grupo of grupos" [value]="grupo.nombre">
+                            {{grupo.nombre}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <td align="center"> <button type=button class="btn btn-primary"  title="delete registro"
+                                            (click)="getRegistrosGrupo(grupo)">Listar Actividades</button> </td>
         </div>
 
         <div class="col-md-12">
@@ -44,7 +51,6 @@
                                 <td align="center">{{ registro.tiempo }} </td>
                                 <td align="center"> <button type=button class="btn btn-primary"  title="delete registro"
                                                             (click)="clickMethod(registro)">x</button> </td>
-
                             </tr>
                             </tbody>
                         </table>

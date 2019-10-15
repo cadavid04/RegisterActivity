@@ -1,4 +1,4 @@
-<div class="main-content">
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -20,12 +20,23 @@
                     </div>
 
                     <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Grupo"[(ngModel)]="registroActividad.grupo" requeried/>
+                        <mat-label>Grupos</mat-label>
+                        <mat-select [(ngModel)]="registroActividad.grupo" name="Grupo" required>
+                            <mat-option *ngFor="let grupo of grupos" [value]="grupo.nombre">
+                                {{grupo.nombre}}
+                            </mat-option>
+                        </mat-select>
                     </mat-form-field>
                   </div>
 
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Actividad"[(ngModel)]="registroActividad.actividad" requeried/>
+                      <mat-label>Actividades</mat-label>
+                      <mat-select [(ngModel)]="registroActividad.actividad" name="Actividad" required>
+                          <mat-option *ngFor="let acti of actividades" [value]="acti.name">
+                              {{acti.name}}
+                          </mat-option>
+                      </mat-select>
+
                   </mat-form-field>
 
                   <mat-form-field class="example-full-width">
@@ -44,7 +55,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 
 
